@@ -1,0 +1,35 @@
+.btn {
+  padding: 6px 12px;
+  outline: none;
+  border: 1px solid #d7d5d5;
+  border-radius: 0;
+  background: none;
+  background-color: @bg-main;
+  &_load-more {
+    position: relative;
+    padding-right: 45px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.98px;
+    color: @font-color-light;
+    &::after {
+      content: "^";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 30px;
+      height: 14px;
+      transform: rotate(180deg) translateY(50%);
+      border-right: 1px solid #d7d5d5;
+      font-family: @font-regular;
+      font-size: 18px;
+      color: #d7d5d5;
+    }
+    &:hover {
+      box-shadow: -1px 1px 2px 0px #b7b7b7;
+    }
+    &:active {
+      box-shadow: none;
+    }
+  }
+}

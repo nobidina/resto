@@ -1,0 +1,42 @@
+.copyrights {
+  margin-top: 20px;
+}
+.copyrights__text {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  color: rgba(235, 235, 235, 0.6);
+}
+.copyrights__link {
+  font-weight: 700;
+  text-decoration: none;
+  color: #ececec;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.4;
+  }
+}
+@media(max-width: 1000px) {
+  .copyrights__text {
+    font-size: 1.5vw;
+  }
+}
+
+@media(max-width: 500px) {
+  .copyrights {
+    margin-top: 10px;
+  }
+  .copyrights__text {
+    line-height: 16px;
+  }
+}
+
+@media(max-width: 400)  {
+  .copyrights__text {
+    font-size: 4vw;
+    line-height: 27px;
+  }
+}
