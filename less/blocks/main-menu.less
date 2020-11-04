@@ -1,69 +1,88 @@
 .main-menu {
   position: relative;
-}
-.main-menu__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.main-menu__item {
-  margin-left: 24px;
-  margin-right: 24px;
-  &:last-of-type {
-    margin-right: 0;
-  }
-}
-.main-menu__link {
-  display: inline-block;
-  font-family: @font-regular;
-  font-size: 14px;
-  line-height: 60px;
-  letter-spacing: 0.98px;
-  text-decoration: none;
-  color: @font-color-dark;
-  &:hover {
-    opacity: 0.7;
-  }
-  &:active {
-    opacity: 0.4;
-  }
-}
-.main-menu__toggle {
-  display: none;
-  z-index: 4;
-  position: absolute;
-  top: -10px;
-  right: 0;
-  cursor: pointer;
-  outline: none;
-  width: 23px;
-  height: 24px;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background: none;
-  background: url("../img/icon-menu.svg") no-repeat 0 0;
-  background-size: 100% 100%;
-  &_close {
-    background: url("../img/icon-cross.svg") no-repeat 0 1px;
-  }
-}
 
-@media(max-width: 750px) {
-  .main-menu__list {
+  &__list {
+    list-style: none;
     position: absolute;
     top: -17px;
     right: -7px;
+    display: flex;
     flex-direction: column;
     width: 170px;
-    box-shadow: -1px -1px 6px -1px #000;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px -6px grey;
     background: @bg-main;
+
+    @media @tablet {
+      position: static;
+      top: auto;
+      right: auto;
+      flex-direction: row;
+      width: auto;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
     &_hidden {
-    display: none;
+      display: none;
     }
   }
-  .main-menu__toggle {
-    display: block;
+  
+  &__item {
+    margin-left: 24px;
+    margin-right: 24px;
+  
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
+  
+  &__link {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: @font-regular;
+    font-size: 14px;
+    line-height: 1.5em;
+    letter-spacing: 0.98px;
+    text-decoration: none;
+    color: @font-color-dark;
+   
+    &:hover {
+      opacity: 0.7;
+    }
+   
+    &:active {
+      opacity: 0.4;
+    }
+  }
+  
+  &__toggle {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    cursor: pointer;
+    outline: none;
+    width: 23px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+    background: url("../img/icon-menu.svg") no-repeat center center;
+    background-size: 80% 80%;
+
+    @media @tablet {
+      display: none;
+    }
+   
+    &_close {
+      background: url("../img/icon-cross.svg") no-repeat center center;
+      background-size: 80% 80%;
+    }
+  }  
 }

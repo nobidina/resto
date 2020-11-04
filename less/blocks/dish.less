@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  
   &_decor {
     &::before {
       content: "";
@@ -13,35 +14,35 @@
       height: 1px;
       background-color: #e3e1e1;
     }
+    
     .dish__name {
       padding-right: 25px;
     }
+    
     .dish__price {
       padding-left: 25px;
     }
   }
-}
-.dish__name {
-  line-height: 20px;
-  letter-spacing: 0.8px;
-  text-decoration: none;
-  color: @font-color;
-  background-color: @bg-main;
-  &:hover {
-    color: rgba(84, 84, 84, 0.7);
+
+  &__name {
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    color: @font-color;
+    background-color: @bg-main;
   }
-  &:active {
-    color: rgba(84, 84, 84, 0.4);
+  
+  &__description {
+    font-family: @font-regular;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    color: @font-color-light;
   }
-}
-.dish__description {
-  font-family: @font-regular;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.6px;
-  color: @font-color-light;
-}
-.dish__price {
-  letter-spacing: 0.8px;
-  background-color: @bg-main;
+  
+  &__price {
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    background-color: @bg-main;
+  }
 }

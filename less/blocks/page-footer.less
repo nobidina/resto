@@ -1,80 +1,80 @@
 .page-footer {
-  padding-top: 90px;
-  padding-bottom: 80px;
   background-color: @bg-dark;
-}
-.page-footer__inner {
-  display: flex;
-  justify-content: space-between;
-  .container();
-}
-.page-footer__item {
-  width: 20.5%;
-}
-.page-footer__menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.page-footer__menu-link {
-  line-height: 35px;
-  letter-spacing: 0.8px;
-  text-decoration: none;
-  color: @font-color-2;
-  &:hover {
-    opacity: 0.7;
-  }
-  &:active {
-    opacity: 0.4;
-  }
-}
-@media (max-width: 1000px) {
-  .page-footer {
-    padding-top: 50px;
-    padding-bottom: 40px;
-  }
-  .page-footer__menu {
-    font-size: 1.5vw;
-  }
-}
 
-@media(max-width: 700px) {
-  .page-footer {
-    padding-top: 30px;
-    padding-bottom: 20px;
-  }
-  .page-footer__item .logo {
-      margin: 0 auto;
-  }
-  .page-footer__inner {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .page-footer__item {
-    width: 35%;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-}
-
-@media(max-width: 500px) {
-  .page-footer__menu-link {
-    font-size: 3vw;
-    line-height: 27px;
-  }
-}
-
-@media(max-width: 450px) {
-  .page-footer__item {
-    width: 100%;
-  }
-  .page-footer__menu {
+  &__inner {
+    .container();
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media @tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    @media @desktop {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
   }
-  .page-footer__menu-item {
-    margin-left: 10px;
-    margin-right: 10px;
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media @tablet {
+      align-items: flex-start;
+      max-width: 20%;
+      margin-bottom: 0;
+    }
+  }
+  
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    @media @tablet {
+      flex-direction: column;
+    }
   }
 
+  &__menu-item {
+    margin-right: 15px;
+
+    @media @tablet {
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  &__menu-link {
+    font-size: 12px;
+    line-height: 1.5em;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    color: @font-color-2;
+   
+    &:hover {
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.4;
+    }
+  }
 }

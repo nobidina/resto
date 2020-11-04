@@ -1,45 +1,30 @@
-.contacts__title {
-  margin: 0;
-  line-height: 30px;
-  letter-spacing: 1px;
-  color: @font-color-2;
-}
-.contacts__adress {
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 100;
-  letter-spacing: 1.5px;
-  color: rgba(235, 235, 235, 0.6);
-}
-.contacts__phone {
-  line-height: 30px;
-  letter-spacing: 0.8px;
-  color: @font-color-2;
-}
+.contacts {
+  text-align: center;
 
-@media(max-width: 1000px) {
-  .contacts__title {
-    font-size: 1.6vw;
+  @media @tablet {
+    text-align: left;
   }
-  .contacts__adress {
-    font-size: 1.5vw;
-  }
-  .contacts__phone {
-    font-size: 1.6vw;
-  }
-}
 
-@media(max-width: 500px) {
-  .contacts__title {
-    font-size: 5vw;
-    line-height: 27px;
+  &__title {
+    margin: 0 0 15px 0;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    color: @font-color-2;
   }
-  .contacts__adress {
-    font-size: 4vw;
-    line-height: 27px;
+
+  &__adress {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.8em;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    color: rgba(235, 235, 235, 0.6);
   }
-  .contacts__phone {
-    font-size: 5vw;
-    line-height: 27px;
+
+  &__phone {
+    line-height: 1.5em;
+    letter-spacing: 0.8px;
+    color: @font-color-2;
   }
 }

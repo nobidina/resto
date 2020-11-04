@@ -3,15 +3,17 @@
   outline: none;
   border: 1px solid #d7d5d5;
   border-radius: 0;
-  background: none;
-  background-color: @bg-main;
+  background: @bg-main;
+
   &_load-more {
     position: relative;
     padding-right: 45px;
+    border-radius: 3px;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 0.98px;
+    letter-spacing: 1px;
     color: @font-color-light;
+  
     &::after {
       content: "^";
       position: absolute;
@@ -25,11 +27,13 @@
       font-size: 18px;
       color: #d7d5d5;
     }
+  
     &:hover {
-      box-shadow: -1px 1px 2px 0px #b7b7b7;
+      transform: scale(1.05);
     }
+  
     &:active {
-      box-shadow: none;
+      transform: scale(1);
     }
   }
 }
