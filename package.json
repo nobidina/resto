@@ -2,7 +2,7 @@
   "name": "resto",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект «Pink» от HTML Academy",
+  "description": "resto",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.1.x",
     "autoprefixer": "6.5.3",
